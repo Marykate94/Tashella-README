@@ -188,7 +188,7 @@ function writeToFile(fileName, data) {
             console.log("YAY! Your README.md file has been generated")
         });
     }
-
+// Do I have to call writeToFile?
 
 // TODO: Create a function to initialize app
 function init() {}
