@@ -180,7 +180,6 @@ const promptReadme = readmeData => {
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    function writeToFile(fileName, data) {
         fs.writeFile(fileName, data, err => {
             if (err) {
               return console.log(err);
@@ -189,7 +188,7 @@ function writeToFile(fileName, data) {
             console.log("Success! Your README.md file has been generated")
         });
     }
-}
+
 
 // TODO: Create a function to initialize app
 function init() {}
