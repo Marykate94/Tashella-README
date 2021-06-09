@@ -185,7 +185,7 @@ function writeToFile(fileName, data) {
               return console.log(err);
             }
           
-            console.log("Success! Your README.md file has been generated")
+            console.log("YAY! Your README.md file has been generated")
         });
     }
 
