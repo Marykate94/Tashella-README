@@ -1,4 +1,5 @@
 // TODO: Include packages needed for this application
+const fs = require('fs');
 const inquirer = require('inquirer');
 // will need to create page-template file below
 // const generatePage = require('./src/page-template');
@@ -173,14 +174,25 @@ const promptReadme = readmeData => {
             message: 'Please provide examples on how to run tests for your application:',
             when: ({ confirmTests }) => confirmTests
         }
-    ]);
+    ])
+    .then(projectData => {
+        readmeData.projects.push(projectData);
+        return questions;
+    })
 };
+
+// questions()
+// .then(promptReadme)
+// .then(readmeData => {
+    
+
+// })
 
 // questions section part of first array - place into HTML according to Questions section
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-        fs.writeFile(fileName, data, err => {
+function writeToFile(writeFile, data) {
+        fs.writeFile(writeFile, data, err => {
             if (err) {
               return console.log(err);
             }
