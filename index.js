@@ -82,7 +82,7 @@ const questions = () => {
 const promptReadme = readmeData => {
     console.log(`
     =============
-    Add a Project
+    Develop README
     =============
     `);
 
@@ -161,11 +161,11 @@ const promptReadme = readmeData => {
             type: 'input',
             name: 'contributors',
             message: 'Please provide collaboration guidelines for other contributors:',
-            // when: ({ confirmContributors }) => confirmContributors
+            when: ({ confirmContributors }) => confirmContributors
         },
         {
             type: 'confirm',
-            name: 'testsConfirm',
+            name: 'confirmTests',
             message: 'Have you written tests for your application?',
             default: true
         },
@@ -173,15 +173,15 @@ const promptReadme = readmeData => {
             type: 'input',
             name: 'tests',
             message: 'Please provide examples on how to run tests for your application:',
-            // when: ({ confirmTests }) => confirmTests
+            when: ({ confirmTests }) => confirmTests
         }
     ])
     .then(projectData => {
         readmeData.projects.push(projectData);
         if (projectData.testsConfirm) {
-            return promptReadme(tests);
+            return promptReadme(readmeData);
         } else {
-        return readmeData;
+        return questions;
         }
     })
 };
