@@ -161,7 +161,7 @@ const promptReadme = readmeData => {
             type: 'input',
             name: 'contributors',
             message: 'Please provide collaboration guidelines for other contributors:',
-            when: ({ confirmContributors }) => confirmContributors
+            // when: ({ confirmContributors }) => confirmContributors
         },
         {
             type: 'confirm',
@@ -178,8 +178,11 @@ const promptReadme = readmeData => {
     ])
     .then(projectData => {
         readmeData.projects.push(projectData);
-
+        if (projectData.confirmTests) {
+            return promptReadme(readmeData);
+        } else {
         return readmeData;
+        }
     })
 };
 
