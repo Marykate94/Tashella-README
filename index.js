@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
+const generateMarkdown = require('./utils/generateMarkdown');
 // will need to create page-template file below
 // const generatePage = require('./src/page-template');
 const { writeFile, copyFile } = require('./utils/generateMarkdown');
@@ -177,16 +178,23 @@ const promptReadme = readmeData => {
     ])
     .then(projectData => {
         readmeData.projects.push(projectData);
-        return questions;
+
+        return readmeData;
     })
 };
 
+questions() 
+    .then(promptReadme)
+    .then(readmeData => {
+        return generateMarkdown(readmeData);
+    })
 // questions()
-// .then(promptReadme)
-// .then(readmeData => {
-    
+//     .then(promptReadme)
+//     .then(readmeData => {
+//     return generateMarkdown(readmeData);
+//     }
 
-// })
+//  }
 
 // questions section part of first array - place into HTML according to Questions section
 
