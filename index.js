@@ -173,13 +173,13 @@ const promptReadme = readmeData => {
             type: 'input',
             name: 'tests',
             message: 'Please provide examples on how to run tests for your application:',
-            when: ({ confirmTests }) => confirmTests
+            // when: ({ confirmTests }) => confirmTests
         }
     ])
     .then(projectData => {
         readmeData.projects.push(projectData);
-        if (projectData.confirmTests) {
-            return promptReadme(readmeData);
+        if (projectData.testsConfirm) {
+            return promptReadme(tests);
         } else {
         return readmeData;
         }
