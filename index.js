@@ -191,6 +191,14 @@ questions()
     .then(readmeData => {
         return generateMarkdown(readmeData);
     })
+    .then(pageHTML => {
+        return writeFile(pageHTML);
+    })
+    .then(writeToFile => {
+        console.log(writeToFile);
+        return copyFile();
+    })
+    .then(copy)
 // questions()
 //     .then(promptReadme)
 //     .then(readmeData => {
