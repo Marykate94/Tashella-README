@@ -174,7 +174,16 @@ const promptReadme = readmeData => {
     })
 };
 
- promptReadme()
+ promptReadme() 
+ .then(fileName => {
+     return fs.writeFile(fileName)
+     .then(writeToFile => {
+         console.log(writeToFile);
+         return fs.copyFile();
+     })
+     .then(copy)
+ })
+
 
  // call write to file / make promises / basically init function within here. 
 //         return generateMarkdown(readmeData);
@@ -197,7 +206,7 @@ const promptReadme = readmeData => {
 
 // TODO: Create a function to write README file
   function writeToFile(fileName, data) {
-     fileName = 'README.md'
+     fileName = './readme-guide.md'
          fs.writeFile(fileName, data, err => {
              if (err) {
                return console.log(err);
