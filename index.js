@@ -2,12 +2,10 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown');
-// will need to create page-template file below
-// const generatePage = require('./src/page-template');
-const { writeFile, copyFile } = require('./utils/generateMarkdown');
+
+// const { writeFile, copyFile } = require('./readme-guide.md');
 
 // TODO: Create an array of questions for user input
-// const questions = [];
 // created prompt readme array to loop through
 const promptReadme = readmeData => {
 
@@ -176,43 +174,43 @@ const promptReadme = readmeData => {
     })
 };
 
-promptReadme() 
-    // .then(readmeData => {
-    //     return generateMarkdown(readmeData);
-    // })
-    // .then(pageHTML => {
-    //     return writeFile(pageHTML);
-    // })
-    // .then(writeToFile => {
-    //     console.log(writeToFile);
-    //     return copyFile();
-    // })
+ promptReadme()
+
+ // call write to file / make promises / basically init function within here. 
+//         return generateMarkdown(readmeData);
+//     })
+    //  .then(readmeData => {
+    //      return generateMarkdown(readmeData);
+    //  })
+    //  .then(pageHTML => {
+    //      return writeFile(pageHTML);
+    //  })
+    //  .then(writeToFile => {
+    //      console.log(writeToFile);
+    //      return copyFile();
+    //  })
     // .then(copy)
-// questions()
-//     .then(promptReadme)
-//     .then(readmeData => {
-//     return generateMarkdown(readmeData);
-//     }
-
-//  }
-
-// questions section part of first array - place into HTML according to Questions section
+    //  promptReadme()
+    //  .then(readmeData => {
+    //  return generateMarkdown(readmeData);
+    //  }
 
 // TODO: Create a function to write README file
-// function writeToFile(fileName, data) {
-    // fileName = 'README.md'
-    //     fs.writeFile(fileName, data, err => {
-    //         if (err) {
-    //           return console.log(err);
-    //         }
+  function writeToFile(fileName, data) {
+     fileName = 'README.md'
+         fs.writeFile(fileName, data, err => {
+             if (err) {
+               return console.log(err);
+             }
           
-    //         console.log("YAY! Your README.md file has been generated")
-    //     });
-    // }
+             console.log("YAY! Your README.md file has been generated")
+         });
+      }
 
 
 // TODO: Create a function to initialize app - look into asynchronous functions
-// function init() {}
+// can write within prompt readme function with promises... potentially 
+//   function init() {}
 
 // Function call to initialize app
-// init();
+//   init();
