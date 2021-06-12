@@ -34,8 +34,7 @@ function generateMarkdown(data) {
       ## Tests
       ${promptReadme.test}
       ## Questions
-      
-
+  
 `;
 }
 

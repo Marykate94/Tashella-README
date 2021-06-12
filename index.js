@@ -8,8 +8,14 @@ const { writeFile, copyFile } = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
 // const questions = [];
-const questions = () => {
-    return inquirer.prompt ([
+// created prompt readme array to loop through
+const promptReadme = readmeData => {
+
+    if (!readmeData) {
+        readmeData = [];
+    }
+    return inquirer
+    .prompt([
         {
             type: 'input',
             name: 'name',
@@ -74,23 +80,7 @@ const questions = () => {
                     return false;
                 }
             }
-        }
-
-    ]);
-};
-
-const promptReadme = readmeData => {
-    console.log(`
-    =============
-    Develop README
-    =============
-    `);
-
-    if (!readmeData.projects) {
-        readmeData.projects = [];
-    }
-    return inquirer
-    .prompt([
+        },
         {
             type: 'input',
             name: 'title',
@@ -177,28 +167,27 @@ const promptReadme = readmeData => {
         }
     ])
     .then(projectData => {
-        readmeData.projects.push(projectData);
+        readmeData.push(projectData);
         if (projectData.testsConfirm) {
             return promptReadme(readmeData);
         } else {
-        return questions;
+        return readmeData;
         }
     })
 };
 
-questions() 
-    .then(promptReadme)
-    .then(readmeData => {
-        return generateMarkdown(readmeData);
-    })
-    .then(pageHTML => {
-        return writeFile(pageHTML);
-    })
-    .then(writeToFile => {
-        console.log(writeToFile);
-        return copyFile();
-    })
-    .then(copy)
+promptReadme() 
+    // .then(readmeData => {
+    //     return generateMarkdown(readmeData);
+    // })
+    // .then(pageHTML => {
+    //     return writeFile(pageHTML);
+    // })
+    // .then(writeToFile => {
+    //     console.log(writeToFile);
+    //     return copyFile();
+    // })
+    // .then(copy)
 // questions()
 //     .then(promptReadme)
 //     .then(readmeData => {
@@ -210,19 +199,20 @@ questions()
 // questions section part of first array - place into HTML according to Questions section
 
 // TODO: Create a function to write README file
-function writeToFile(writeFile, data) {
-        fs.writeFile(writeFile, data, err => {
-            if (err) {
-              return console.log(err);
-            }
+// function writeToFile(fileName, data) {
+    // fileName = 'README.md'
+    //     fs.writeFile(fileName, data, err => {
+    //         if (err) {
+    //           return console.log(err);
+    //         }
           
-            console.log("YAY! Your README.md file has been generated")
-        });
-    }
-// Do I have to call writeToFile?
+    //         console.log("YAY! Your README.md file has been generated")
+    //     });
+    // }
 
-// TODO: Create a function to initialize app
-function init() {}
+
+// TODO: Create a function to initialize app - look into asynchronous functions
+// function init() {}
 
 // Function call to initialize app
-init();
+// init();
