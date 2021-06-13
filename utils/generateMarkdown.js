@@ -36,7 +36,10 @@ function generateMarkdown(readmeData) {
   ${readmeData.usage}
 
   ## License
-  ![badge](https://img.shields.io/badge/license-${readmeData.license}-blue)
+  ${readmeData.license} 
+
+ 
+  [Check out each licenses meaning](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/licensing-a-repository)
 
   ## Contributors
   ${readmeData.contributors}
