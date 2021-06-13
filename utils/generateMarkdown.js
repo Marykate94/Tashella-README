@@ -1,52 +1,53 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+// function renderLicenseBadge(license) {}
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+// function renderLicenseLink(license) {}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+// function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(readmeData) {
   return `
-      # ${readmeData.title}
+  # ${readmeData.title}
 
-      ![badge](https://img.shields.io/badge/license-${readmeData.license}-blue)
+  ![badge](https://img.shields.io/badge/license-${readmeData.license}-blue)
 
-      ## Description
-      ${readmeData.description}
-      ## Table of Contents
-      - [Description](#description)
-      - [Instructions](#instructions)
-      - [Usage](#usage)
-      - [License](#license)
-      - [Contributors](#contributors)
-      - [Tests](#tests)
-      - [Questions](#questions)
+  ## Description
+  ${readmeData.description}
 
-      ## Instructions 
-      ${readmeData.instructions}
+  ## Table of Contents
+  - [Description](#description)
+  - [Instructions](#instructions)
+  - [Usage](#usage)
+  - [License](#license)
+  - [Contributors](#contributors)
+  - [Tests](#tests)
+  - [Questions](#questions)
 
-      ## Usage
-      ${readmeData.usage}
+  ## Instructions 
+  ${readmeData.instructions}
 
-      ## License
-      ![badge](https://img.shields.io/badge/license-${readmeData.license}-blue)
+  ## Usage
+  ${readmeData.usage}
 
-      ## Contributors
-      ${readmeData.contributors}
+  ## License
+  ![badge](https://img.shields.io/badge/license-${readmeData.license}-blue)
 
-      ## Tests
-      ${readmeData.test}
+  ## Contributors
+  ${readmeData.contributors}
 
-      ## Questions
-      My name is ${readmeData.name}. Find my on GitHub using ${readmeData.github} or ${readmeData.link}. 
-      Alternatively I can be reached via email at ${readmeData.contact}.
-      The best way to reach me is via ${readmeData.reach}.
+  ## Tests
+  ${readmeData.test}
+
+  ## Questions
+  My name is ${readmeData.name}. Find my on GitHub using ${readmeData.github} or ${readmeData.link}. 
+  Alternatively I can be reached via email at ${readmeData.contact}.
+  he best way to reach me is via ${readmeData.reach}.
 `;
 }
 
