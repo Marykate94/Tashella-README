@@ -7,11 +7,11 @@ const generateMarkdown = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
 // created prompt readme array to loop through
-const promptReadme = readmeData => {
+const promptReadme = () => {
 
-    if (!readmeData) {
-        readmeData = [];
-    }
+    // if (!readmeData) {
+    //     readmeData = [];
+    // }
     return inquirer
     .prompt([
         {
@@ -164,24 +164,25 @@ const promptReadme = readmeData => {
             when: ({ confirmTests }) => confirmTests
         }
     ])
-    .then(projectData => {
-        readmeData.push(projectData);
-        if (projectData.testsConfirm) {
-            return promptReadme(readmeData);
-        } else {
-        return readmeData;
-        }
-    })
+    .then(readmeData => writeToFile('./README.md', generateMarkdown(readmeData)));
+    // .then(projectData => {
+    //     readmeData.push(projectData);
+    //     if (projectData.testsConfirm) {
+    //         return promptReadme(readmeData);
+    //     } else {
+    //     return readmeData;
+    //     }
+    // })
 };
 
- promptReadme() 
- .then(fileName => {
-     return fs.writeFile(fileName)
-     .then(writeToFile => {
-         console.log(writeToFile);
-     })
-     .then(copy)
- })
+//  promptReadme() 
+//  .then(fileName => {
+//      return fs.writeFile(fileName)
+//      .then(writeToFile => {
+//          console.log(writeToFile);
+//      })
+//      .then(copy)
+//  })
 
 
  // call write to file / make promises / basically init function within here. 
@@ -215,7 +216,7 @@ const promptReadme = readmeData => {
          });
       }
 
-
+      promptReadme() 
 // TODO: Create a function to initialize app - look into asynchronous functions
 // can write within prompt readme function with promises... potentially 
 //   function init() {}
