@@ -2,7 +2,7 @@
   # mk
 
   
-  ![GitHub license](https://img.shields.io/badge/license-APACHE-blue.svg)
+  ![GitHub license](https://img.shields.io/badge/license-GNU-blue.svg)
   ## Description
   mk
 
@@ -22,12 +22,13 @@
   mk
 
   ## License
-  APACHE 
-  
-   [Check out each licenses meaning](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/licensing-a-repository)
+  GNU 
+
+ 
+  [Check out each licenses meaning](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/licensing-a-repository)
 
   ## Contributors
-  n
+  undefined
 
   ## Tests
   undefined

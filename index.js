@@ -14,6 +14,91 @@ const promptReadme = readmeData => {
      }
     return inquirer
     .prompt([
+        
+        {
+            type: 'input',
+            name: 'title',
+            message: 'What is the title of your project? (Required)',
+            validate: titleInput => {
+                if (titleInput) {
+                  return true;
+                } else {
+                  console.log('You need to enter a project title!');
+                  return false;
+                }
+              }
+        },
+        {
+            type: 'input',
+            name: 'description',
+            message: 'Please provide a brief description of your application: (Required)',
+            validate: descriptionInput => {
+                if (descriptionInput) {
+                    return true;
+                } else {
+                    console.log('You need to enter a description of your application!');
+                    return false;
+                }
+            }
+        },
+        // table of contents???
+        {
+            type: 'input',
+            name: 'instructions',
+            message: 'What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running: (Required)',
+            validate: instructionsInput => {
+                if (instructionsInput) {
+                    return true;
+                } else {
+                    console.log('You need to provide installation instructions!');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'usage',
+            message: 'Please provide instructions and examples for use. Include screenshots as needed: (Required)',
+            validate: usageInput => {
+                if (usageInput) {
+                    return true;
+                } else {
+                    console.log('You need to provide instructions on how to use this application!');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'checkbox',
+            name: 'license',
+            message: 'What license/s did you use? (Check all that apply)',
+            choices: ['GNU', 'Mozilla-2.0', 'MIT', 'APACHE', 'Unlicense']
+        },
+        // add badge icon to licenses?
+        {
+            type: 'confirm',
+            name: 'confirmContributors',
+            message: 'Would you like others to contribute to this project?',
+            default: true
+        },
+        {
+            type: 'input',
+            name: 'contributors',
+            message: 'Please provide collaboration guidelines for other contributors:',
+            when: ({ confirmContributors }) => confirmContributors
+        },
+        {
+            type: 'confirm',
+            name: 'confirmTests',
+            message: 'Have you written tests for your application?',
+            default: true
+        },
+        {
+            type: 'input',
+            name: 'tests',
+            message: 'Please provide examples on how to run tests for your application:',
+            when: ({ confirmTests }) => confirmTests
+        },
         {
             type: 'input',
             name: 'name',
@@ -78,90 +163,6 @@ const promptReadme = readmeData => {
                     return false;
                 }
             }
-        },
-        {
-            type: 'input',
-            name: 'title',
-            message: 'What is the title of your project? (Required)',
-            validate: titleInput => {
-                if (titleInput) {
-                  return true;
-                } else {
-                  console.log('You need to enter a project title!');
-                  return false;
-                }
-              }
-        },
-        {
-            type: 'input',
-            name: 'description',
-            message: 'Please provide a brief description of your application: (Required)',
-            validate: descriptionInput => {
-                if (descriptionInput) {
-                    return true;
-                } else {
-                    console.log('You need to enter a description of your application!');
-                    return false;
-                }
-            }
-        },
-        // table of contents???
-        {
-            type: 'input',
-            name: 'instructions',
-            message: 'What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running: (Required)',
-            validate: instructionsInput => {
-                if (instructionsInput) {
-                    return true;
-                } else {
-                    console.log('You need to provide installation instructions!');
-                    return false;
-                }
-            }
-        },
-        {
-            type: 'input',
-            name: 'usage',
-            message: 'Please provide instructions and examples for use. Include screenshots as needed: (Required)',
-            validate: usageInput => {
-                if (usageInput) {
-                    return true;
-                } else {
-                    console.log('You need to provide instructions on how to use this application!');
-                    return false;
-                }
-            }
-        },
-        {
-            type: 'checkbox',
-            name: 'license',
-            message: 'What license/s did you use? (Check all that apply)',
-            choices: ['GNU-AGPLv3', 'Mozilla-2.0', 'MIT', 'APACHE', 'Unlicense']
-        },
-        // add badge icon to licenses?
-        {
-            type: 'confirm',
-            name: 'confirmContributors',
-            message: 'Would you like others to contribute to this project?',
-            default: true
-        },
-        {
-            type: 'input',
-            name: 'contributors',
-            message: 'Please provide collaboration guidelines for other contributors:',
-            when: ({ confirmContributors }) => confirmContributors
-        },
-        {
-            type: 'confirm',
-            name: 'confirmTests',
-            message: 'Have you written tests for your application?',
-            default: true
-        },
-        {
-            type: 'input',
-            name: 'tests',
-            message: 'Please provide examples on how to run tests for your application:',
-            when: ({ confirmTests }) => confirmTests
         }
     ])
     .then(readmeData => writeToFile('./README.md', generateMarkdown(readmeData)));
@@ -206,6 +207,7 @@ const promptReadme = readmeData => {
 
 // TODO: Create a function to write README file
   function writeToFile(fileName, data) {
+
      fileName = 'README.md'
          fs.writeFile(fileName, data, err => {
              if (err) {
@@ -217,9 +219,3 @@ const promptReadme = readmeData => {
       }
 
       promptReadme() 
-// TODO: Create a function to initialize app - look into asynchronous functions
-// can write within prompt readme function with promises... potentially 
-//   function init() {}
-
-// Function call to initialize app
-//   init();
