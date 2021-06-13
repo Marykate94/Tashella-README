@@ -12,7 +12,11 @@ function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(readmeData) {
-  return `# ${readmeData.title}
+  return `
+      # ${readmeData.title}
+
+      ![badge](https://img.shields.io/badge/license-${readmeData.license}-blue)
+
       ## Description
       ${readmeData.description}
       ## Table of Contents
@@ -26,14 +30,19 @@ function generateMarkdown(readmeData) {
 
       ## Instructions 
       ${readmeData.instructions}
+
       ## Usage
       ${readmeData.usage}
+
       ## License
-      (https://img.shields.io/badge/dynamic/json?url=<URL>&label=License&query=${readmeData.license}&color=blue&prefix=<PREFIX>&suffix=<SUFFIX>)
+      ![badge](https://img.shields.io/badge/license-${readmeData.license}-blue)
+
       ## Contributors
       ${readmeData.contributors}
+
       ## Tests
       ${readmeData.test}
+
       ## Questions
       My name is ${readmeData.name}. Find my on GitHub using ${readmeData.github} or ${readmeData.link}. 
       Alternatively I can be reached via email at ${readmeData.contact}.

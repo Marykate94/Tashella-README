@@ -1,26 +1,35 @@
-# mk
+
+      # Tashella Readme
+
+      ![badge](https://img.shields.io/badge/license-GNU AGPLv3-brightgreen)
+
       ## Description
-      mk
+      Readme Generator
       ## Table of Contents
-      - ![Description](#description)
-      - ![Instructions](#instructions)
-      - ![Usage](#usage)
-      - ![License](#license)
-      - ![Contributors](#contributors)
-      - ![Tests](#tests)
-      - ![Questions](#questions)
+      - [Description](#description)
+      - [Instructions](#instructions)
+      - [Usage](#usage)
+      - [License](#license)
+      - [Contributors](#contributors)
+      - [Tests](#tests)
+      - [Questions](#questions)
 
       ## Instructions 
-      mk
+      install npm node
+
       ## Usage
-      mk
+      hello 
+
       ## License
-      (https://img.shields.io/badge/dynamic/json?url=<URL>&label=License&query=GNU AGPLv3&color=blue&prefix=<PREFIX>&suffix=<SUFFIX>)
+      ![badge](https://img.shields.io/badge/license-GNU AGPLv3-brightgreen)
+
       ## Contributors
-      undefined
+      yes
+
       ## Tests
       undefined
+
       ## Questions
-      My name is mk. Find my on GitHub using mk or mk. 
-      Alternatively I can be reached via email at mk.
-      The best way to reach me is via mk.
+      My name is Marykate. Find my on GitHub using Marykate94 or Marykate94@github.io. 
+      Alternatively I can be reached via email at Marykatesmith64@gmail.com.
+      The best way to reach me is via Email.
