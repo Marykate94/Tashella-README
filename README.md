@@ -1,10 +1,10 @@
 
   # mkayy
 
-  ![badge](https://img.shields.io/badge/license-GNU AGPLv3-blue)
-
+  
+  ![GitHub license](https://img.shields.io/badge/license-MIT License-blue.svg)
   ## Description
-  tashella
+  mkayy
 
   ## Table of Contents
   - [Description](#description)
@@ -16,21 +16,21 @@
   - [Questions](#questions)
 
   ## Instructions 
-  readme
+  mkayy
 
   ## Usage
-  readme
+  mkayy
 
   ## License
-  ![badge](https://img.shields.io/badge/license-GNU AGPLv3-blue)
+  ![badge](https://img.shields.io/badge/license-MIT License-blue)
 
   ## Contributors
-  mk
+  hello
 
   ## Tests
   undefined
 
   ## Questions
-  My name is mk. Find my on GitHub using mkay or mkayy. 
-  Alternatively I can be reached via email at mkayy94.
-  he best way to reach me is via email.
+  My name is mkayy. Find my on GitHub using mkayy or mkayy. 
+  Alternatively I can be reached via email at mkayy.
+  he best way to reach me is via mkayy.

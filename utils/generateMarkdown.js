@@ -15,8 +15,8 @@ function generateMarkdown(readmeData) {
   return `
   # ${readmeData.title}
 
-  ![badge](https://img.shields.io/badge/license-${readmeData.license}-blue)
-
+  
+  ![GitHub license](https://img.shields.io/badge/license-${readmeData.license}-blue.svg)
   ## Description
   ${readmeData.description}
 
