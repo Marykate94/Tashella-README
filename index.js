@@ -7,11 +7,11 @@ const generateMarkdown = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
 // created prompt readme array to loop through
-const promptReadme = () => {
+const promptReadme = readmeData => {
 
-    // if (!readmeData) {
-    //     readmeData = [];
-    // }
+     if (!readmeData) {
+         readmeData = [];
+     }
     return inquirer
     .prompt([
         {

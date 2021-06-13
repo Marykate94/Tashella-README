@@ -18,23 +18,26 @@ function generateMarkdown(readmeData) {
       ## Table of Contents
       - [Description](#description)
       - [Instructions](#instructions)
-      - [Usage](#Usage)
-      - [License](#License)
-      - [Contributors](#Contributors)
-      - [Tests](#Tests)
-      - [Questions](#Questions)
-      ## Instructions
+      - [Usage](#usage)
+      - [License](#license)
+      - [Contributors](#contributors)
+      - [Tests](#tests)
+      - [Questions](#questions)
+
+      ## Instructions 
       ${readmeData.instructions}
       ## Usage
       ${readmeData.usage}
       ## License
-
+      (https://img.shields.io/badge/dynamic/json?url=<URL>&label=License&query=${readmeData.license}&color=blue&prefix=<PREFIX>&suffix=<SUFFIX>)
       ## Contributors
       ${readmeData.contributors}
       ## Tests
       ${readmeData.test}
       ## Questions
-      
+      My name is ${readmeData.name}. Find my on GitHub using ${readmeData.github} or ${readmeData.link}. 
+      Alternatively I can be reached via email at ${readmeData.contact}.
+      The best way to reach me is via ${readmeData.reach}.
 `;
 }
 
