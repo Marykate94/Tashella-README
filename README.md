@@ -2,7 +2,7 @@
   # mk
 
   
-  ![GitHub license](https://img.shields.io/badge/license-GNU-blue.svg)
+  ![GitHub license](https://img.shields.io/badge/license-Unlicense-blue.svg)
   ## Description
   mk
 
@@ -22,7 +22,7 @@
   mk
 
   ## License
-  GNU 
+  Unlicense 
 
  
   [Check out each licenses meaning](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/licensing-a-repository)
@@ -34,6 +34,5 @@
   undefined
 
   ## Questions
-  My name is mk. Find my on GitHub using mk or mk. 
-  Alternatively I can be reached via email at mk.
-  he best way to reach me is via mk.
+  Made by mk. Find me on GitHub at https://github.com/mk. Alternatively I can be reached via email at mk.
+  Instructions on how to reach me: mk

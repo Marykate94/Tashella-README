@@ -14,7 +14,6 @@ const promptReadme = readmeData => {
      }
     return inquirer
     .prompt([
-        
         {
             type: 'input',
             name: 'title',
@@ -72,7 +71,7 @@ const promptReadme = readmeData => {
             type: 'checkbox',
             name: 'license',
             message: 'What license/s did you use? (Check all that apply)',
-            choices: ['GNU', 'Mozilla-2.0', 'MIT', 'APACHE', 'Unlicense']
+            choices: ['GNU', 'Mozilla', 'MIT', 'Apache', 'Unlicense']
         },
         // add badge icon to licenses?
         {
@@ -121,19 +120,6 @@ const promptReadme = readmeData => {
                     return true;
                 } else {
                     console.log('Please enter your username!');
-                    return false;
-                }
-            }
-        },
-        {
-            type: 'input',
-            name: 'link',
-            message: 'What is your GitHub profile link? (Required)',
-            validate: linkInput => {
-                if (linkInput) {
-                    return true;
-                } else {
-                    console.log('Please enter your GitHub profile link!');
                     return false;
                 }
             }

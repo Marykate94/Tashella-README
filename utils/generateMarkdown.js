@@ -48,9 +48,8 @@ function generateMarkdown(readmeData) {
   ${readmeData.test}
 
   ## Questions
-  My name is ${readmeData.name}. Find my on GitHub using ${readmeData.github} or ${readmeData.link}. 
-  Alternatively I can be reached via email at ${readmeData.contact}.
-  he best way to reach me is via ${readmeData.reach}.
+  Made by ${readmeData.name}. Find me on GitHub at https://github.com/${readmeData.github}. Alternatively I can be reached via email at ${readmeData.contact}.
+  Instructions on how to reach me: ${readmeData.reach}
 `;
 }
 
