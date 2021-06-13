@@ -136,7 +136,7 @@ const promptReadme = () => {
             type: 'checkbox',
             name: 'license',
             message: 'What license/s did you use? (Check all that apply)',
-            choices: ['GNU AGPLv3', 'GNU GPLv3', 'Mozilla Public License 2.0', 'MIT License', 'Apache License 2.0', 'The Unlicense']
+            choices: ['GNU AGPLv3', 'Mozilla Public License 2.0', 'MIT License', 'Apache License 2.0', 'The Unlicense']
         },
         // add badge icon to licenses?
         {
