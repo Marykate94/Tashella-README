@@ -2,7 +2,6 @@
   # Tashella-README
 
   
-  ![GitHub license](https://img.shields.io/badge/license-GNU-blue.svg)
   ## Description
   An application that generates a professional README for your repository/project
 
@@ -38,6 +37,12 @@
 
   ## Questions
   Made by Marykate Smith. 
+
+
   Find me on GitHub at https://github.com/Marykate94. 
+
+
   Alternatively I can be reached via email at Marykatesmith64@gmail.com.
+
+
   Instructions on how to reach me: Email
