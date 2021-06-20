@@ -2,9 +2,9 @@
   # Tashella-README
 
   
-  ![GitHub license](https://img.shields.io/badge/license-Mozilla-blue.svg)
+  ![GitHub license](https://img.shields.io/badge/license-GNU-blue.svg)
   ## Description
-  An application used to generate a professional README for your repository in order to save time and focus on the project at hand. 
+  An application that generates a professional README for your repository/project
 
   ## Table of Contents
   - [Description](#description)
@@ -16,23 +16,25 @@
   - [Questions](#questions)
 
   ## Instructions 
-  First you must install node onto your computer using node website and follow the install instructions provided. Once node has been downloaded on to your computer you must also install inquirer by typing npm install inquirer into your terminal. 
-  Example video: https://drive.google.com/file/d/1w8bIHziGEmMYb6kNh0TUDdcH_H4U6rCS/view
+  First you must install node onto your computer. via their website you can download node and follow the instructions to complete the download. After node has been installed you will enter "npm install inquirer" into your terminal once you are in your main file directory of your repo. Once everything has been downloaded in order to initiate the prompts and generate your readme you will run "node index" in the terminal. 
 
   ## Usage
-  example of use is when you have created a repository for your project to provide viewers information and how to use your project
+  A video screencast will be provided to show the full operation of node in the terminal. You must enter information into the prompts following the questions in order to successfully generate a professional readme. 
+  
+  
+  Please see video link for Tashella-README tutorial: https://drive.google.com/file/d/1b4svGFlDH84cRd2dLxuIQT7IONQrvZwJ/view
 
   ## License
-  N/A 
+  N/A
 
  
   [Check out each licenses meaning](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/licensing-a-repository)
 
   ## Contributors
-  please provide additional information to gather or enhance user experience
+  Please adhere to github guidelines and standards upon contributing. 
 
   ## Tests
-  N/A
+  Ran node index and entered the prompts to ensure successful README generation. 
 
   ## Questions
   Made by Marykate Smith. 
