@@ -17,12 +17,13 @@
 
   ## Instructions 
   First you must install node onto your computer using node website and follow the install instructions provided. Once node has been downloaded on to your computer you must also install inquirer by typing npm install inquirer into your terminal. 
+  Example video: https://drive.google.com/file/d/1w8bIHziGEmMYb6kNh0TUDdcH_H4U6rCS/view
 
   ## Usage
   example of use is when you have created a repository for your project to provide viewers information and how to use your project
 
   ## License
-  Mozilla 
+  N/A 
 
  
   [Check out each licenses meaning](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/licensing-a-repository)
@@ -31,7 +32,7 @@
   please provide additional information to gather or enhance user experience
 
   ## Tests
-  undefined
+  N/A
 
   ## Questions
   Made by Marykate Smith. 
