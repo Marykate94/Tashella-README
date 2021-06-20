@@ -57,7 +57,7 @@ const promptReadme = readmeData => {
         {
             type: 'input',
             name: 'usage',
-            message: 'Please provide instructions and examples for use. Include screenshots as needed: (Required)',
+            message: 'Please provide instructions and examples for use: (Required)',
             validate: usageInput => {
                 if (usageInput) {
                     return true;

@@ -1,10 +1,10 @@
 
-  # mk
+  # Tashella-README
 
   
-  ![GitHub license](https://img.shields.io/badge/license-Unlicense-blue.svg)
+  ![GitHub license](https://img.shields.io/badge/license--blue.svg)
   ## Description
-  mk
+  an application that generates a professional readme in order to save time for the user to focus on developing their repository
 
   ## Table of Contents
   - [Description](#description)
@@ -16,13 +16,13 @@
   - [Questions](#questions)
 
   ## Instructions 
-  mk
+  must install npm inquirer
 
   ## Usage
-  mk
+  must run node index in order to generate the prompts for generating a professional readme
 
   ## License
-  Unlicense 
+   
 
  
   [Check out each licenses meaning](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/licensing-a-repository)
@@ -34,5 +34,5 @@
   undefined
 
   ## Questions
-  Made by mk. Find me on GitHub at https://github.com/mk. Alternatively I can be reached via email at mk.
-  Instructions on how to reach me: mk
+  Made by Marykate. Find me on GitHub at https://github.com/Marykate94. Alternatively I can be reached via email at Marykatesmith64@gmail.com.
+  Instructions on how to reach me: Email
